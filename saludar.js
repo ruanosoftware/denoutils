@@ -1,1 +1,2 @@
-export saludar = () => console.log("Hola Mundo");
+const saludar = () => console.log("Hola Mundo");
+export default saludar
