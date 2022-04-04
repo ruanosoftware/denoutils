@@ -1,3 +1,17 @@
+//
+// Script para bajar el contenido de una coleccion en firebase y grabarla en un archivo json
+// Es necesario tener localmente un archivo env.json con las credeciales del proyecto firebase
+//
+// archivo env.json:
+//         {
+//           "apiKey": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+//           "projectId": "XXXXXXXXXXXX",
+//           "storageBucket": "XXXXXXXXXXXXXXXXXXXXXXXXX",
+//           "messagingSenderId": "XXXXXXXXXXXX",
+//           "appId": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+//         }
+// Ej: deno run -A https://raw.githubusercontent.com/ruanosoftware/denoutils/main/firebase/download-firestore-collection.js --collection cursos
+//
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js';
 import { parse } from 'https://deno.land/std/flags/mod.ts';
 import {
@@ -16,9 +30,6 @@ if(!firebaseConfig) {
     console.error(`Could not read firebase config from ${configFile}`);
     Deno.exit(1);
 }
-
-console.log('config:', JSON.stringify(firebaseConfig, null, 2));
-
 
 // Parsear los argumentos de la línea de comandos
 const args = parse(Deno.args);
