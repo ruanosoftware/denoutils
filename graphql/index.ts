@@ -61,8 +61,8 @@ const resolvers = {
     }
   },
   Person: {
-    full_name: (root: any) => `${root.first_name} ${root.last_name}`,
-    address: (root: any) => {
+    full_name: (root) => `${root.first_name} ${root.last_name}`,
+    address: (root) => {
       return {
         street: root.street,
         city: root.city
