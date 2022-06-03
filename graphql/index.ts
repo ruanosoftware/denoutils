@@ -3,7 +3,7 @@ import { GraphQLHTTP } from 'https://deno.land/x/gql@1.1.1/mod.ts'
 import { makeExecutableSchema } from 'https://deno.land/x/graphql_tools@0.0.2/mod.ts'
 import { gql } from 'https://deno.land/x/graphql_tag@0.0.1/mod.ts'
 
-import { personas } from './personas.js'
+import { personas } from 'https://rr-deno.netlify.app/graphql/personas.js'
 
 const typeDefs = gql`
   type Address {
