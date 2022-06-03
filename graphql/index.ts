@@ -50,7 +50,7 @@ const resolvers = {
     }
   },
   Mutation: {
-    addPerson: (root: any, args: any) => {
+    addPerson: (root, args) => {
         const persona = {
             ...args, id: '999'
         } as any;
