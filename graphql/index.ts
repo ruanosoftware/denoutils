@@ -45,7 +45,7 @@ const resolvers = {
   Query: { 
     personCount: () => personas.length,
     allPersons: () => personas,
-    findPerson: (root: any, args: any) => {
+    findPerson: (root, args) => {
       return personas.find(persona => persona.first_name === args.name)
     }
   },
