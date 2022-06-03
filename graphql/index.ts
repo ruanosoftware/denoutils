@@ -53,7 +53,7 @@ const resolvers = {
     addPerson: (root, args) => {
         const persona = {
             ...args, id: '999'
-        } as any;
+        };
 
         personas.push(persona);
 
