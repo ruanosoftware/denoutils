@@ -5,6 +5,8 @@ import { gql } from 'https://deno.land/x/graphql_tag@0.0.1/mod.ts'
 
 import { personas } from 'https://rr-deno.netlify.app/graphql/personas.js'
 
+console.log('test data with elements:', personas.length);
+
 const typeDefs = gql`
   type Address {
     street: String!
@@ -85,8 +87,5 @@ const s = new Server({
   addr: ':3000'
 })
 
+console.log('listening to port 3000');
 s.listenAndServe()
-
-
-
-//const myUUID = crypto.randomUUID();
